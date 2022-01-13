@@ -30,21 +30,3 @@
     </div>
   </div>
 </div>
-
-<!-- This section shows only if user clicks Edit button -->
-<div *ngIf="editable">
-  <input
-    class="sm-text-input"
-    placeholder="edit item"
-    [value]="item.description"
-    #editedItem
-    (keyup.enter)="saveItem(editedItem.value)"
-  />
-
-  <div class="btn-wrapper">
-    <button class="btn" (click)="editable = !editable">Cancel</button>
-    <button class="btn btn-save" (click)="saveItem(editedItem.value)">
-      Save
-    </button>
-  </div>
-</div>
